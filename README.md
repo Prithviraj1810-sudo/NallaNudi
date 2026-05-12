@@ -152,7 +152,7 @@ This project is open source. Add your preferred license here (e.g., MIT, Apache 
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
+- GitHub: [@Prithviraj1810-sudo](https://github.com/Prithviraj1810-sudo)
 
 ---
 
