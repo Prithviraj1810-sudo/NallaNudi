@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="40dp">
+
+        <!-- HEADER CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#4A148C"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <TextView
+                        android:id="@+id/btnDarkMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌙"
+                        android:textSize="20sp"
+                        android:padding="4dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ನಲ್ಲ ನುಡಿ"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nalla Nudi • Bridge Dictionary"
+                    android:textSize="12sp"
+                    android:textColor="#CE93D8"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SEARCH BAR -->
+        <TextView
+            android:id="@+id/btnGoToSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Search any word..."
+            android:background="@drawable/search_bg_white"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            android:textColor="#9C27B0"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- WORD OF THE DAY -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#311B92"
+                android:padding="14dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Word of the Day"
+                        android:textSize="10sp"
+                        android:textColor="#CE93D8"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvWordOfDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Photosynthesis"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/tvWordOfDayKannada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ"
+                        android:textSize="11sp"
+                        android:textColor="#B39DDB"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📖"
+                    android:textSize="30sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- RECENT SEARCHES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Searches"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:paddingBottom="6dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="14dp">
+
+            <LinearLayout
+                android:id="@+id/layoutRecentChips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <!-- SUBJECT BUTTONS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse by Subject"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnScience"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#7B1FA2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔬"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Science"
+                        android:textSize="10sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnMath"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#1565C0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📐"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Math"
+                        android:textSize="10sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnCommerce"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#E65100">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💼"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Commerce"
+                        android:textSize="10sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- FEATURES LABEL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Features"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:paddingBottom="8dp"/>
+
+        <!-- Row 1: My List + Flashcards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnMyList"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#FFFFFF">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My List"
+                        android:textSize="11sp"
+                        android:textColor="#4A148C"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnFlashcard"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#E8F5E9">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🃏"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Flashcards"
+                        android:textSize="11sp"
+                        android:textColor="#2E7D32"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Row 2: Quiz + Progress -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnQuiz"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#EDE7F6">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🧠"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz"
+                        android:textSize="11sp"
+                        android:textColor="#4A148C"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnProgress"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#E3F2FD">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Progress"
+                        android:textSize="11sp"
+                        android:textColor="#1565C0"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Row 3: Spelling + Challenge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnSpelling"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#FFF3E0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔤"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spelling Bee"
+                        android:textSize="11sp"
+                        android:textColor="#E65100"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnChallenge"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#FCE4EC">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎯"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Challenge"
+                        android:textSize="11sp"
+                        android:textColor="#C62828"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Row 4: Word History (full width) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnHistory"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="3dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#E8EAF6">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📖"
+                    android:textSize="28sp"
+                    android:paddingEnd="12dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Word History"
+                        android:textSize="14sp"
+                        android:textColor="#283593"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Track words you viewed"
+                        android:textSize="11sp"
+                        android:textColor="#5C6BC0"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
